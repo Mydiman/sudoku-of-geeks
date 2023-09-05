@@ -139,8 +139,11 @@ def y_to_ybox(y):
     y -= 1
   return y
 
+error = 1
+while error == 1:
 random_sub_board(30)
 if (solveSudoku(grid, 0, 0)):
+    error = 0
     printing(grid)
 else:
     print("no solution  exists ")
